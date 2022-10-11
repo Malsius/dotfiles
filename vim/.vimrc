@@ -117,3 +117,7 @@ set background=dark
 colorscheme palenight
 set laststatus=2
 let g:lightline = { 'colorscheme': 'palenight' }
+let g:palenight_terminal_italics=1
+if (has("termguicolors"))
+    set termguicolors
+endif
