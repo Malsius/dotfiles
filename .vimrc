@@ -25,8 +25,8 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'drewtempelmeyer/palenight.vim'
 Plug 'itchyny/lightline.vim'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
 call plug#end()
 
@@ -112,12 +112,12 @@ set autoindent
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Theme
 """"""""""""""""""""""""""""""""""""""""""""""""""
-
-set background=dark
-colorscheme palenight
-set laststatus=2
-let g:lightline = { 'colorscheme': 'palenight' }
-let g:palenight_terminal_italics=1
-if (has("termguicolors"))
+colorscheme onehalfdark
+let g:lightline = { 'colorscheme': 'onehalfdark' }
+if exists('+termguicolors')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
     set termguicolors
 endif
+set laststatus=2
+set noshowmode
