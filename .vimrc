@@ -77,9 +77,6 @@ syntax on
 " Enable line wrapping
 set wrap
 
-" Wrap on column 80
-set textwidth=79
-
 " Highlight current line
 set cursorline
 
