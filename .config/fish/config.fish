@@ -1,6 +1,7 @@
 set fish_greeting
 
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
+set -x MANROFFOPT "-c"
 
 alias ls='exa --color=always --group-directories-first'
 alias la='exa -la --color=always --group-directories-first'
